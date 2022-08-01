@@ -15,3 +15,12 @@ hogy a tömb minden eleme number típusú-e vagy sem
 - `someElementsAreNumbers`: Értéke true/false attól függően, 
 hogy a tömbben van-e number típusú elem vagy sem
 */
+
+const checker = (randomArr, value) => {
+  return {
+    exists: randomArr.includes(value),
+    index: randomArr.includes(value) === true ? randomArr.indexOf(value) : -1,
+    allElementsAreNumbers: randomArr.every((el) => typeof el === "number"),
+    someElementsAreNumbers: randomArr.some((el) => typeof el === "number"),
+  };
+};
